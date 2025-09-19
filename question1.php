@@ -4,19 +4,24 @@
 
 // 1000'den küçük olan 3 veya 5'in tüm katlarının toplamını bulunuz.
 
-$limit = 10;
-$multiple_1 = 3;
-$multiple_2 = 5;
-$numbers = [];
-$total = 0;
+function question1($limit)
+{
+    $multiple_1 = 3;
+    $multiple_2 = 5;
+    $numbers = [];
+    $total = 0;
 
-for ($i = 0; $i < $limit; $i++) {
-    if ($i % $multiple_1 == 0 || $i % $multiple_2 == 0) {
-        $numbers[] = $i;
+    for ($i = 0; $i < $limit; $i++) {
+        if ($i % $multiple_1 == 0 || $i % $multiple_2 == 0) {
+            $numbers[] = $i;
+        }
     }
+
+    $total = array_sum($numbers);
+
+    // print_r($numbers);
+    return $total;
 }
 
-$total = array_sum($numbers);
-
-print_r($numbers);
-echo $total;
+echo question1(10) . PHP_EOL;
+echo question1(1000) . PHP_EOL;
