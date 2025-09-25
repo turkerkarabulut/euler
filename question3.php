@@ -30,14 +30,12 @@ function asal_carpanlari_bul(int $number): array
     return $asalCarpanlar;
 }
 
-
-
 function question3(int $number): int
 {
-    asal_carpanlari_bul($number);
-    return max(asal_carpanlari_bul($number));
+    $asal_carpanlar = asal_carpanlari_bul($number);
+    $en_buyuk_eleman = max($asal_carpanlar);
+    return $en_buyuk_eleman;
 }
-
 
 var_dump(question3(13195));
 var_dump(question3(600851475143));
