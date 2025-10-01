@@ -6,29 +6,34 @@
 // İki üç basamaklı sayının çarpımından elde edilen en büyük palindromu bulun.
 
 
-function palindrom_mu($sayi): bool 
+function palindrom_mu($sayi): bool
 {
     $sayi_ters = strrev($sayi);
     return $sayi_ters == $sayi;
 }
 
-function en_buyuk_palindrom()
+function en_buyuk_palindrom($basamak_sayisi)
 {
-    $max = 0;
-    $a = 0;
-    $b = 0;
+    $en_buyuk_sayi = (int) str_repeat("9", $basamak_sayisi);
+    $en_kucuk_sayi = (int) ("1" . str_repeat("0", $basamak_sayisi - 1));
 
-    for ($i = 10; $i <= 99; $i++) {
-        for ($j = 100; $j <= 999; $j++) {
-            $carpim = $i * $j;
-            if ($carpim == strrev($carpim)) {
-                $max = $carpim;
-                $a = $i;
-                $b = $j;
+    for ($i = $en_buyuk_sayi; $i >= $en_kucuk_sayi; $i--) {
+
+        for ($j = $en_buyuk_sayi; $j >= $en_kucuk_sayi; $j--) {
+
+            $sonuc = $i * $j;
+
+            if(palindrom_mu($sonuc)){
+
+                return $sonuc;
+
             }
+            
         }
     }
-    return [$max, $a, $b];
+
+    return null;
 }
 
-var_dump(en_buyuk_palindrom());
+var_dump(en_buyuk_palindrom(2));
+var_dump(en_buyuk_palindrom(3));
