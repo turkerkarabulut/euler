@@ -5,6 +5,13 @@
 
 // İki üç basamaklı sayının çarpımından elde edilen en büyük palindromu bulun.
 
+
+function palindrom_mu($sayi): bool 
+{
+    $sayi_ters = strrev($sayi);
+    return $sayi_ters == $sayi;
+}
+
 function en_buyuk_palindrom()
 {
     $max = 0;
