@@ -18,17 +18,11 @@ function en_buyuk_palindrom($basamak_sayisi)
     $en_kucuk_sayi = (int) ("1" . str_repeat("0", $basamak_sayisi - 1));
 
     for ($i = $en_buyuk_sayi; $i >= $en_kucuk_sayi; $i--) {
-
         for ($j = $en_buyuk_sayi; $j >= $en_kucuk_sayi; $j--) {
-
             $sonuc = $i * $j;
-
-            if(palindrom_mu($sonuc)){
-
+            if (palindrom_mu($sonuc)) {
                 return $sonuc;
-
             }
-            
         }
     }
 
