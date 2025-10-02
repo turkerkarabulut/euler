@@ -20,8 +20,11 @@ function en_buyuk_palindrom($basamak_sayisi)
     $en_buyuk_palindrom = 0;
 
     for ($i = $en_buyuk_sayi; $i >= $en_kucuk_sayi; $i--) {
-        for ($j = $en_buyuk_sayi; $j >= $en_kucuk_sayi; $j--) {
+        for ($j = $i; $j >= $en_kucuk_sayi; $j--) {
             $carpim = $i * $j;
+            if ($carpim <= $en_buyuk_palindrom) {
+                break;
+            }
             if (palindrom_mu($carpim) && $carpim > $en_buyuk_palindrom) {
                 $en_buyuk_palindrom = $carpim;
             }
