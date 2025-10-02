@@ -17,16 +17,18 @@ function en_buyuk_palindrom($basamak_sayisi)
     $en_buyuk_sayi = (int) str_repeat("9", $basamak_sayisi);
     $en_kucuk_sayi = (int) ("1" . str_repeat("0", $basamak_sayisi - 1));
 
+    $en_buyuk_palindrom = 0;
+
     for ($i = $en_buyuk_sayi; $i >= $en_kucuk_sayi; $i--) {
         for ($j = $en_buyuk_sayi; $j >= $en_kucuk_sayi; $j--) {
-            $sonuc = $i * $j;
-            if (palindrom_mu($sonuc)) {
-                return $sonuc;
+            $carpim = $i * $j;
+            if (palindrom_mu($carpim) && $carpim > $en_buyuk_palindrom) {
+                $en_buyuk_palindrom = $carpim;
             }
         }
     }
 
-    return null;
+    return $en_buyuk_palindrom;
 }
 
 var_dump(en_buyuk_palindrom(2));
