@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PinPanel Pro | E-Pin Satış Yönetim Sistemi</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-logo">PP</div>
+          <div>
+            <h1>PinPanel Pro</h1>
+            <small>Admin Workspace</small>
+          </div>
+        </div>
+
+        <form class="search-box">
+          <label for="menu-search">Menüde ara</label>
+          <input id="menu-search" type="text" placeholder="Sipariş, ürün, rapor..." />
+        </form>
+
+        <nav class="menu-group">
+          <p class="menu-title">Genel</p>
+          <a class="active" href="#"><span>📊</span> Dashboard</a>
+          <a href="#"><span>🧾</span> Siparişler</a>
+          <a href="#"><span>💳</span> Ödemeler</a>
+          <a href="#"><span>👥</span> Müşteriler</a>
+          <a href="#"><span>🎟️</span> Kampanyalar</a>
+        </nav>
+
+        <nav class="menu-group">
+          <p class="menu-title">Katalog</p>
+          <a href="#"><span>🎮</span> Oyun Kartları</a>
+          <a href="#"><span>🧩</span> E-Pin Ürünleri</a>
+          <a href="#"><span>📦</span> Stok Havuzu</a>
+          <a href="#"><span>🗂️</span> Kategoriler</a>
+          <a href="#"><span>🏷️</span> Markalar</a>
+        </nav>
+
+        <nav class="menu-group">
+          <p class="menu-title">Sistem</p>
+          <a href="#"><span>🛡️</span> Yetkiler</a>
+          <a href="#"><span>📨</span> Bildirimler</a>
+          <a href="#"><span>⚙️</span> Ayarlar</a>
+          <a href="#"><span>📈</span> Loglar</a>
+        </nav>
+
+        <div class="upgrade-card">
+          <h3>Pro Raporlama</h3>
+          <p>Detaylı satış analizi ve otomatik dışa aktarma için paketi yükselt.</p>
+          <button>Paketi Yükselt</button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <p class="page-kicker">E-Pin Satış Yönetimi</p>
+            <h2>Dashboard</h2>
+            <p class="page-desc">Bugünkü gelir, stok hareketleri ve sipariş durumları.</p>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost">CSV İndir</button>
+            <button class="ghost">Filtrele</button>
+            <button class="primary">+ Yeni E-Pin Ekle</button>
+          </div>
+        </header>
+
+        <section class="stats">
+          <article>
+            <span>Günlük Satış</span>
+            <strong>₺24.950</strong>
+            <small class="positive">+%18 geçen güne göre</small>
+          </article>
+          <article>
+            <span>Bekleyen Sipariş</span>
+            <strong>38</strong>
+            <small class="warning">12 sipariş manuel onay bekliyor</small>
+          </article>
+          <article>
+            <span>Toplam Stok</span>
+            <strong>1.280 Kod</strong>
+            <small class="positive">+240 yeni kod yüklendi</small>
+          </article>
+          <article>
+            <span>İade Talepleri</span>
+            <strong>7</strong>
+            <small class="warning">2 tanesi kritik öncelik</small>
+          </article>
+          <article>
+            <span>Yeni Müşteri</span>
+            <strong>+56</strong>
+            <small class="positive">Dönüşüm oranı %4.9</small>
+          </article>
+          <article>
+            <span>Aktif Kampanya</span>
+            <strong>9</strong>
+            <small class="muted">3 kampanya bugün bitiyor</small>
+          </article>
+        </section>
+
+        <section class="grid-two">
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <h3>7 Günlük Satış Grafiği</h3>
+              <select>
+                <option>Son 7 Gün</option>
+                <option>Son 30 Gün</option>
+              </select>
+            </div>
+            <div class="fake-chart">
+              <div class="bar" style="--h: 45%"><span>Pzt</span></div>
+              <div class="bar" style="--h: 60%"><span>Sal</span></div>
+              <div class="bar" style="--h: 42%"><span>Çar</span></div>
+              <div class="bar" style="--h: 78%"><span>Per</span></div>
+              <div class="bar" style="--h: 90%"><span>Cum</span></div>
+              <div class="bar" style="--h: 66%"><span>Cmt</span></div>
+              <div class="bar" style="--h: 52%"><span>Paz</span></div>
+            </div>
+          </article>
+
+          <article class="panel quick-actions">
+            <h3>Hızlı İşlemler</h3>
+            <div class="action-list">
+              <button>Toplu E-Pin Yükle</button>
+              <button>Yeni Kupon Tanımla</button>
+              <button>Şüpheli Siparişleri Aç</button>
+              <button>Stok Alarmı Kur</button>
+              <button>Mail Şablonu Güncelle</button>
+              <button>Ödeme Sağlayıcı Testi</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="grid-two">
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Son Siparişler</h3>
+              <a href="#">Tümünü Gör</a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Sipariş No</th>
+                  <th>Müşteri</th>
+                  <th>Ürün</th>
+                  <th>Tutar</th>
+                  <th>Durum</th>
+                  <th>Kanal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#10482</td>
+                  <td>Ahmet Yılmaz</td>
+                  <td>Google Play 250 TL</td>
+                  <td>₺250</td>
+                  <td><span class="status done">Teslim Edildi</span></td>
+                  <td>Web</td>
+                </tr>
+                <tr>
+                  <td>#10481</td>
+                  <td>Elif Kaya</td>
+                  <td>Steam 500 TL</td>
+                  <td>₺500</td>
+                  <td><span class="status pending">Beklemede</span></td>
+                  <td>Mobil</td>
+                </tr>
+                <tr>
+                  <td>#10480</td>
+                  <td>Mert Can</td>
+                  <td>iTunes 100 TL</td>
+                  <td>₺100</td>
+                  <td><span class="status review">İncelemede</span></td>
+                  <td>Web</td>
+                </tr>
+                <tr>
+                  <td>#10479</td>
+                  <td>Sena Koç</td>
+                  <td>Riot 350 TL</td>
+                  <td>₺350</td>
+                  <td><span class="status done">Teslim Edildi</span></td>
+                  <td>Pazar Yeri</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Stok Alarmı</h3>
+              <a href="#">Yönet</a>
+            </div>
+            <ul class="stock-list">
+              <li>
+                <div>
+                  <strong>PlayStation 100 TL</strong>
+                  <p>Kalan: 12 kod</p>
+                </div>
+                <span class="badge danger">Kritik</span>
+              </li>
+              <li>
+                <div>
+                  <strong>Xbox 250 TL</strong>
+                  <p>Kalan: 19 kod</p>
+                </div>
+                <span class="badge warning">Düşük</span>
+              </li>
+              <li>
+                <div>
+                  <strong>Google Play 500 TL</strong>
+                  <p>Kalan: 41 kod</p>
+                </div>
+                <span class="badge good">Normal</span>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="panel form-panel">
+          <div class="panel-head">
+            <h3>Yeni E-Pin Ekle</h3>
+            <p>Hızlı ürün girişi formu</p>
+          </div>
+          <form class="pin-form">
+            <div class="field">
+              <label>Ürün Adı</label>
+              <input type="text" placeholder="Örn: Steam Cüzdan Kodu 100 TL" />
+            </div>
+            <div class="field">
+              <label>Kategori</label>
+              <select>
+                <option>Oyun Kartları</option>
+                <option>Mobil Ödeme</option>
+                <option>Dijital Abonelik</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Satış Fiyatı</label>
+              <input type="number" placeholder="100" />
+            </div>
+            <div class="field">
+              <label>Stok Adedi</label>
+              <input type="number" placeholder="50" />
+            </div>
+            <div class="field full">
+              <label>E-Pin Kodları (satır satır)</label>
+              <textarea rows="6" placeholder="PIN-XXXX-XXXX\nPIN-YYYY-YYYY"></textarea>
+            </div>
+            <div class="field full">
+              <label>Ürün Açıklaması</label>
+              <textarea rows="4" placeholder="Kullanım detayları, teslim koşulları, iade bilgisi..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="reset" class="ghost">Temizle</button>
+              <button type="button" class="primary">Taslak Kaydet</button>
+              <button type="submit" class="primary dark">Yayına Al</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="grid-two">
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Destek Talepleri</h3>
+              <a href="#">Tüm talepler</a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Talep No</th>
+                  <th>Kullanıcı</th>
+                  <th>Konu</th>
+                  <th>Öncelik</th>
+                  <th>Durum</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>#TK-2921</td><td>Furkan U.</td><td>Kod geçersiz uyarısı</td><td>Yüksek</td><td><span class="status review">İncelemede</span></td></tr>
+                <tr><td>#TK-2920</td><td>Nehir A.</td><td>Ödeme beklemede kaldı</td><td>Orta</td><td><span class="status pending">Beklemede</span></td></tr>
+                <tr><td>#TK-2919</td><td>Baran T.</td><td>Çift çekim sorunu</td><td>Kritik</td><td><span class="status done">Çözüldü</span></td></tr>
+                <tr><td>#TK-2918</td><td>Zeynep D.</td><td>Kampanya kodu çalışmıyor</td><td>Düşük</td><td><span class="status done">Çözüldü</span></td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Ödeme Sağlayıcı Durumu</h3>
+              <a href="#">Ayrıntılar</a>
+            </div>
+            <ul class="stock-list">
+              <li><div><strong>İyzico API</strong><p>Son kontrol: 2 dk önce</p></div><span class="badge good">Aktif</span></li>
+              <li><div><strong>Papara API</strong><p>Son kontrol: 3 dk önce</p></div><span class="badge good">Aktif</span></li>
+              <li><div><strong>Stripe API</strong><p>Son kontrol: 5 dk önce</p></div><span class="badge warning">Gecikme</span></li>
+              <li><div><strong>Banka Sanal POS</strong><p>Son kontrol: 1 dk önce</p></div><span class="badge good">Aktif</span></li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h3>Kampanya Yönetimi</h3>
+            <a href="#">Yeni kampanya</a>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Kampanya</th>
+                <th>Kod</th>
+                <th>İndirim</th>
+                <th>Başlangıç</th>
+                <th>Bitiş</th>
+                <th>Durum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Hafta Sonu Fırsatı</td><td>WEEKEND15</td><td>%15</td><td>06.05.2026</td><td>09.05.2026</td><td><span class="status done">Aktif</span></td></tr>
+              <tr><td>Yeni Üye Bonusu</td><td>WELCOME50</td><td>₺50</td><td>01.05.2026</td><td>31.05.2026</td><td><span class="status done">Aktif</span></td></tr>
+              <tr><td>Gece İndirimi</td><td>NIGHT10</td><td>%10</td><td>03.05.2026</td><td>10.05.2026</td><td><span class="status review">Planlandı</span></td></tr>
+              <tr><td>VIP Özel</td><td>VIP25</td><td>%25</td><td>05.05.2026</td><td>12.05.2026</td><td><span class="status pending">Onayda</span></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="grid-two">
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Takım Görevleri</h3>
+              <a href="#">Görev ekle</a>
+            </div>
+            <ul class="stock-list">
+              <li><div><strong>Yeni ürün görselleri</strong><p>Atanan: Tasarım Ekibi</p></div><span class="badge warning">Bugün</span></li>
+              <li><div><strong>Fraud filtre güncellemesi</strong><p>Atanan: Backend Ekibi</p></div><span class="badge danger">Acil</span></li>
+              <li><div><strong>Mail şablonları</strong><p>Atanan: Pazarlama</p></div><span class="badge good">Tamam</span></li>
+              <li><div><strong>Stok entegrasyonu</strong><p>Atanan: Operasyon</p></div><span class="badge warning">Devam</span></li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Son Aktivite Akışı</h3>
+              <a href="#">Canlı log</a>
+            </div>
+            <ul class="stock-list">
+              <li><div><strong>Admin giriş yaptı</strong><p>melis.admin - 14:05</p></div><span class="badge good">Bilgi</span></li>
+              <li><div><strong>1.000 adet kod yüklendi</strong><p>Steam 100 TL havuzu - 14:01</p></div><span class="badge good">Başarılı</span></li>
+              <li><div><strong>Webhook timeout</strong><p>Stripe callback - 13:58</p></div><span class="badge warning">Uyarı</span></li>
+              <li><div><strong>Şüpheli sipariş işaretlendi</strong><p>#10477 - 13:55</p></div><span class="badge danger">Risk</span></li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="panel form-panel">
+          <div class="panel-head">
+            <h3>Toplu Kod İçe Aktarma</h3>
+            <p>CSV veya düz metin ile toplu yükleme</p>
+          </div>
+          <form class="pin-form">
+            <div class="field">
+              <label>Dosya Seç</label>
+              <input type="file" />
+            </div>
+            <div class="field">
+              <label>Sağlayıcı</label>
+              <select><option>Steam</option><option>Riot</option><option>Google Play</option></select>
+            </div>
+            <div class="field">
+              <label>Nominal Değer</label>
+              <select><option>50 TL</option><option>100 TL</option><option>250 TL</option><option>500 TL</option></select>
+            </div>
+            <div class="field">
+              <label>Otomatik Aktif Et</label>
+              <select><option>Evet</option><option>Hayır</option></select>
+            </div>
+            <div class="field full">
+              <label>Not</label>
+              <textarea rows="4" placeholder="Bu yüklemeye özel operasyon notu"></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="ghost">Kontrol Et</button>
+              <button type="button" class="primary">Önizleme</button>
+              <button type="submit" class="primary dark">Toplu Yükle</button>
+            </div>
+          </form>
+        </section>
+
+
+        <section class="panel">
+          <div class="panel-head">
+            <h3>Aylık Performans Kırılımı</h3>
+            <a href="#">Raporu indir</a>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Ay</th>
+                <th>Toplam Sipariş</th>
+                <th>Başarılı Teslim</th>
+                <th>İptal/İade</th>
+                <th>Ciro</th>
+                <th>Marj</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Ocak 2026</td><td>12.420</td><td>12.090</td><td>330</td><td>₺2.104.000</td><td>%22</td></tr>
+              <tr><td>Şubat 2026</td><td>13.101</td><td>12.731</td><td>370</td><td>₺2.227.500</td><td>%23</td></tr>
+              <tr><td>Mart 2026</td><td>14.210</td><td>13.799</td><td>411</td><td>₺2.401.900</td><td>%24</td></tr>
+              <tr><td>Nisan 2026</td><td>15.330</td><td>14.932</td><td>398</td><td>₺2.578.100</td><td>%25</td></tr>
+              <tr><td>Mayıs 2026</td><td>9.222</td><td>8.961</td><td>261</td><td>₺1.532.300</td><td>%24</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="grid-two">
+          <article class="panel form-panel">
+            <div class="panel-head">
+              <h3>Bildirim Şablon Ayarları</h3>
+              <p>SMS ve e-posta içerikleri</p>
+            </div>
+            <form class="pin-form">
+              <div class="field">
+                <label>Şablon Adı</label>
+                <input type="text" placeholder="Sipariş Teslim Başarılı" />
+              </div>
+              <div class="field">
+                <label>Kanal</label>
+                <select><option>SMS</option><option>E-Posta</option><option>Push</option></select>
+              </div>
+              <div class="field full">
+                <label>Konu</label>
+                <input type="text" placeholder="Siparişiniz teslim edildi" />
+              </div>
+              <div class="field full">
+                <label>Mesaj İçeriği</label>
+                <textarea rows="5" placeholder="Merhaba {{ad}}, siparişiniz başarıyla teslim edildi..."></textarea>
+              </div>
+              <div class="form-actions">
+                <button class="ghost" type="button">Taslak Sil</button>
+                <button class="primary" type="button">Önizleme Gönder</button>
+                <button class="primary dark" type="submit">Şablonu Kaydet</button>
+              </div>
+            </form>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Risk Kontrol Kuralları</h3>
+              <a href="#">Kural ekle</a>
+            </div>
+            <ul class="stock-list">
+              <li><div><strong>Aynı IP 10 dk / 5 sipariş</strong><p>Durum: Aktif</p></div><span class="badge warning">Sınırda</span></li>
+              <li><div><strong>Yeni üye yüksek tutarlı sipariş</strong><p>Durum: Aktif</p></div><span class="badge danger">Manuel Onay</span></li>
+              <li><div><strong>Başarısız ödeme 3+ deneme</strong><p>Durum: Aktif</p></div><span class="badge good">Engelle</span></li>
+              <li><div><strong>VPN / Proxy tespiti</strong><p>Durum: Aktif</p></div><span class="badge warning">İnceleme</span></li>
+              <li><div><strong>Blacklist e-posta kontrolü</strong><p>Durum: Aktif</p></div><span class="badge good">Temiz</span></li>
+            </ul>
+          </article>
+        </section>
+
+
+        <section class="panel">
+          <div class="panel-head">
+            <h3>Yönetici Notları & Hatırlatmalar</h3>
+            <a href="#">Not ekle</a>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Tarih</th>
+                <th>Not</th>
+                <th>Sorumlu</th>
+                <th>Durum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>06.05.2026</td><td>Riot stokları gece 23:00'te yenilenecek.</td><td>Operasyon</td><td><span class="status review">Takipte</span></td></tr>
+              <tr><td>06.05.2026</td><td>Hafta sonu kampanyası için banner yayını yapılacak.</td><td>Pazarlama</td><td><span class="status pending">Planlandı</span></td></tr>
+              <tr><td>05.05.2026</td><td>Ödeme sağlayıcı webhook logları arşivlendi.</td><td>Backend</td><td><span class="status done">Tamamlandı</span></td></tr>
+              <tr><td>05.05.2026</td><td>Yeni kullanıcı onboarding mail akışı güncellendi.</td><td>CRM</td><td><span class="status done">Tamamlandı</span></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+
+        <section class="panel">
+          <div class="panel-head">
+            <h3>Panel Sonu Bilgilendirme</h3>
+            <a href="#">Dokümantasyon</a>
+          </div>
+          <p class="muted">Bu arayüz tamamen statik HTML/CSS örneğidir ve backend entegrasyonu için hazırdır.</p>
+          <p class="muted">İstersen bir sonraki adımda PHP veya Node.js API ile ürün/sipariş/ödeme yönetimini bağlayabiliriz.</p>
+          <p class="muted">Ayrıca kullanıcı girişi, rol bazlı yetki, audit log ve webhook yönetimi de eklenebilir.</p>
+        </section>
+
+      </main>
+    </div>
+  </body>
+</html>

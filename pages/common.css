@@ -1,0 +1,14 @@
+
+:root {--bg:#f3f5ff;--panel:#fff;--text:#1b2a4b;--muted:#65738f;--pri:#4f5eff;--border:#dfe5f5;}
+*{box-sizing:border-box} body{margin:0;font-family:Segoe UI,sans-serif;background:var(--bg);color:var(--text)}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{background:#0f1b3a;color:#fff;padding:18px}.sidebar h1{font-size:1.2rem;margin:0 0 14px}
+.sidebar a{display:block;color:#d8dff5;text-decoration:none;padding:9px 10px;border-radius:8px;margin-bottom:6px}
+.sidebar a.active,.sidebar a:hover{background:#25355f;color:#fff}
+.content{padding:24px}.panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}
+.btn{border:1px solid var(--border);background:#fff;padding:8px 12px;border-radius:8px;cursor:pointer}.btn.primary{background:var(--pri);border-color:var(--pri);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(240px,1fr));gap:12px}
+.field{display:flex;flex-direction:column;gap:6px}.field input,.field select,.field textarea{padding:10px;border:1px solid var(--border);border-radius:8px}
+table{width:100%;border-collapse:collapse} th,td{padding:10px;border-bottom:1px solid var(--border);text-align:left}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
